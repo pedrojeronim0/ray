@@ -56,8 +56,9 @@ class TimeSeriesSplitter(Splitter):
     If ``time_column`` is provided the dataset is sorted by that column before
     splitting. Otherwise the dataset is assumed to already be in temporal order.
 
-    WARNING: When sorting by ``time_column``, rows with identical timestamps have no
-    guaranteed tie-breaker.
+    .. warning::
+        When sorting by ``time_column``, rows with identical timestamps have no
+        guaranteed tie-breaker.
     """
 
     def __init__(
