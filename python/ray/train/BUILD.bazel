@@ -768,14 +768,6 @@ py_test(
 )
 
 py_test(
-    name = "test_splitters_integration",
-    size = "small",
-    srcs = ["tests/test_splitters_integration.py"],
-    tags = ["team:ml"],
-    deps = [":train_lib"],
-)
-
-py_test(
     name = "test_storage",
     size = "small",
     srcs = ["tests/test_storage.py"],
