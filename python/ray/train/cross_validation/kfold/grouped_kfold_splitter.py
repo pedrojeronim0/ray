@@ -73,7 +73,9 @@ class GroupedKFoldSplitter(_HashBasedKFoldSplitter):
 
         # Warn if any of the group columns are floating-point types
         float_cols = [
-            c for c in self._group_columns if pa.types.is_floating(schema[c].type)
+            c
+            for c in self._group_columns
+            if pa.types.is_floating(schema.types[schema.names.index(c)])
         ]
         if float_cols:
             logger.warning(
